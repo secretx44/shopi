@@ -34,7 +34,7 @@ const ProdList = ({products, status}) => {
                             products.slice(0, 20).map(product => (
                                 <div className='product-item bg-dark' key = {product.id} onClick = {() => viewModalHandler(product)}>
                                     <div className='product-item-img'>
-                                        <img src = {product.images[0]} alt = "" />
+                                        <img src = {product.images[0]} alt = "" className='object-cover w-full h-full transition ease-out transform hover:scale-125 duration-2000 rounded-xl'/>
                                         <div className = "product-item-cat text-white fs-13 text-uppercase bg-gold fw-6">{product.category.name}</div>
                                     </div>
                                     <div className='product-item-body'>

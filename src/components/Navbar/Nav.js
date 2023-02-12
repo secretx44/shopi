@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BsSearch } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCartTotal } from '../../store/cartSlice';
@@ -24,17 +25,17 @@ const Nav = () => {
         <div className = "container">
           <div className = "navbar-top flex flex-between">
               <Link to = "/" className = "navbar-brand">
-                <span className = "text-regal-blue">shooo</span><span className='text-gold'>pi</span>
+                <span className = "text-regal-blue">SHO</span><span className='text-gold'>PI.</span>
               </Link>
-
+            <div className = "navbar-btns flex">
               <form className = "navbar-search flex">
                 <input type = "text" placeholder='Search here ...' />
                 <button type = "submit" className = "navbar-search-btn">
-                  <i className = "fas fa-search"></i>
+                  <BsSearch className='mx-auto'/>
                 </button>
               </form>
 
-              <div className = "navbar-btns">
+           
                 <Link to = "/cart" className="add-to-cart-btn flex">
                   <span className = "btn-ico">
                     <i className = "fas fa-shopping-cart"></i>

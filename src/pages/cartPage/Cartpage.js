@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { AiOutlineMinus } from 'react-icons/ai';
+import { BsFillTrashFill, BsPlusLg } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { clearCart, getCartTotal, removeFromCart, toggleCartQty } from '../../store/cartSlice';
@@ -49,7 +51,7 @@ const Cartpage = () => {
                                                 <div className='cart-item-img flex flex-column bg-white'>
                                                     <img src = {cartProduct.images[0]} alt = {cartProduct.title} />
                                                     <button type = "button" className='btn-square rmv-from-cart-btn' onClick={() => dispatch(removeFromCart(cartProduct.id))}>
-                                                        <span className='btn-square-icon'><i className='fas fa-trash'></i></span>
+                                                        <span className='btn-square-icon'><BsFillTrashFill/></span>
                                                     </button>
                                                 </div>
 
@@ -59,11 +61,11 @@ const Cartpage = () => {
                                                         <span className = "text-light-blue qty-text">Qty: </span>
                                                         <div className = "qty-change flex">
                                                         <button type = "button" className='qty-dec fs-14' onClick={() => dispatch(toggleCartQty({id: cartProduct.id, type: "DEC"}))}>
-                                                            <i className = "fas fa-minus text-light-blue"></i>
+                                                            <AiOutlineMinus className='mx-auto'/>
                                                         </button>
                                                         <span className = "qty-value flex flex-center">{cartProduct.quantity}</span>
                                                         <button type = "button" className='qty-inc fs-14 text-light-blue' onClick={() => dispatch(toggleCartQty({id: cartProduct.id, type: "INC"}))}>
-                                                            <i className = "fas fa-plus"></i>
+                                                            <BsPlusLg className='mx-auto'/>
                                                         </button>
                                                         </div>
                                                     </div>

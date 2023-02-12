@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { AiOutlineMinus } from 'react-icons/ai';
+import { BsPlusLg } from 'react-icons/bs';
+import { FaTimes } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToCart } from '../../store/cartSlice';
@@ -52,7 +55,7 @@ const SingleProd = () => {
     <div className='overlay-bg' onClick = {modalOverlayHandler}>
       <div className = "product-details-modal bg-white">
         <button type = "button" className='modal-close-btn flex flex-center fs-14' onClick={() => dispatch(setIsModalVisible(false))}>
-          <i className = "fas fa-times"></i>
+          <FaTimes/>
         </button>
         <div className = "details-content grid">
           {/* details left */}
@@ -71,19 +74,19 @@ const SingleProd = () => {
                 <span className = "text-light-blue qty-text">Qty: </span>
                 <div className = "qty-change flex">
                   <button type = "button" className='qty-dec fs-14' onClick={() => decreaseQty()}>
-                    <i className = "fas fa-minus text-light-blue"></i>
+                     <AiOutlineMinus className='mx-auto'/>
                   </button>
                   <span className = "qty-value flex flex-center">{qty}</span>
                   <button type = "button" className='qty-inc fs-14 text-light-blue' onClick={() => increaseQty()}>
-                    <i className = "fas fa-plus"></i>
+                    <BsPlusLg className='mx-auto'/>
                   </button>
                 </div>
               </div>
-              <button type = "button" className='btn-primary add-to-cart-btn' onClick={() => addToCartHandler(product)}>
+              <button type = "button" className='btn add-to-cart-btn' onClick={() => addToCartHandler(product)}>
                   <span className = "btn-icon">
                     <i className='fas fa-cart-shopping'></i>
                   </span>
-                  <span className = 'btn-text'>Add To Cart</span>
+                  <span className=''>Add To Cart</span>
               </button>
             </div>
           </div>

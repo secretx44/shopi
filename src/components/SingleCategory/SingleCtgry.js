@@ -32,7 +32,7 @@ const SingleCtgry = ({products, status}) => {
                     <div className='product-items grid'>
                         {
                             products.map(product => (
-                                <div className='product-item bg-white' key = {product.id} onClick = {() => viewModalHandler(product)}>
+                                <div className='product-item bg-dark' key = {product.id} onClick = {() => viewModalHandler(product)}>
                                     <div className='product-item-img'>
                                         <img src = {product.images[0]} alt = "" />
                                         <div className = "product-item-cat text-white fs-13 text-uppercase bg-gold fw-6">{product.category.name}</div>
