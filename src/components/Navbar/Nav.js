@@ -27,7 +27,7 @@ const Nav = () => {
         <div className = "container">
           <div className = "navbar-top flex flex-between">
               <Link to = "/" className = "navbar-brand">
-                <span className = "text-regal-blue">SHO</span><span className='text-gold'>PIYEY.</span>
+                <span className = "text-dark">SHO</span><span className='text-gold'>PIYEY.</span>
               </Link>
             <div className = "navbar-btns flex">
               <form className = "navbar-search flex">
@@ -50,8 +50,8 @@ const Nav = () => {
           </div>
         </div>
         
-        <div className='navbar-bottom bg-regal-blue'>
-          <div className='container flex flex-between'>
+        <div className='navbar-bottom bg-dark'>
+          <div className='container flex flex-between '>
             <ul className = {`nav-links flex ${isSidebarOpen ? 'show-nav-links' : ""}`}>
               <button type = "button" className='navbar-hide-btn text-white' onClick={() => setIsSidebarOpen(false)}>
                 <FaTimes/>
