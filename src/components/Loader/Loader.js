@@ -3,11 +3,11 @@ import "./Loader.scss";
 
 const Loader = () => {
   return (
-    <div className='container'>
-        <div className = "flex flex-center loader">
-            {/* <img src = {spinner} alt = "loader" /> */}
-        </div>
-    </div>
+           <div class="loader mx-auto">
+                <span class="hour"></span>
+                <span class="min"></span>
+                <span class="circel"></span>
+            </div>
   )
 }
 

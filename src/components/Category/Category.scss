@@ -1,5 +1,6 @@
 .category-items{
     row-gap: 20px;
+
     .category-item{
         &-img{
             border-radius: 10px;
@@ -26,4 +27,15 @@
     @media screen and (min-width: 1400px){
         grid-template-columns: repeat(5, 1fr);
     }
+}
+
+.category-items:hover > :not(:hover) {
+    filter: blur(1px);
+    opacity: 0.5;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -webkit-filter: blur(1px);
 }

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
+import { FaTimes } from 'react-icons/fa';
+import { RxHamburgerMenu } from 'react-icons/rx';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCartTotal } from '../../store/cartSlice';
@@ -20,12 +22,12 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className = "navbar">
+   <nav className = "navbar">
       <div className='navbar-content'>
         <div className = "container">
           <div className = "navbar-top flex flex-between">
               <Link to = "/" className = "navbar-brand">
-                <span className = "text-regal-blue">SHO</span><span className='text-gold'>PI.</span>
+                <span className = "text-regal-blue">SHO</span><span className='text-gold'>PIYEY.</span>
               </Link>
             <div className = "navbar-btns flex">
               <form className = "navbar-search flex">
@@ -35,7 +37,7 @@ const Nav = () => {
                 </button>
               </form>
 
-           
+             
                 <Link to = "/cart" className="add-to-cart-btn flex">
                   <span className = "btn-ico">
                     <i className = "fas fa-shopping-cart"></i>
@@ -52,7 +54,7 @@ const Nav = () => {
           <div className='container flex flex-between'>
             <ul className = {`nav-links flex ${isSidebarOpen ? 'show-nav-links' : ""}`}>
               <button type = "button" className='navbar-hide-btn text-white' onClick={() => setIsSidebarOpen(false)}>
-                <i className='fas fa-times'></i>
+                <FaTimes/>
               </button>
               {
                 categories.map(category => (
@@ -62,7 +64,7 @@ const Nav = () => {
             </ul>
 
             <button type = "button" className='navbar-show-btn text-gold' onClick={() => setIsSidebarOpen(true)}>
-              <i className = "fas fa-bars"></i>
+              <RxHamburgerMenu/>
             </button>
           </div>
         </div>

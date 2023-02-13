@@ -1,5 +1,4 @@
 @import '/src/variable';
-
 .navbar{
     padding: 16px 0 0 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -17,7 +16,6 @@
     }
     &-search{
         align-items: stretch;
-        margin-right: 10px;
         input{
             width: 100%;
             border: 0.5px solid rgba(0, 0, 0, 0.05);
@@ -25,16 +23,16 @@
             height: 44px;
             padding: 4px 16px;
             border-radius: 3px 0 0 3px;
-            outline: none;
         }
         .navbar-search-btn{
             width: 60px;
             height: 44px;
             background-color: $clr-gold;
             color: $clr-white;
+            transition: $transition;
 
             &:hover{
-             opacity: .9;
+                background-color: $clr-regal-blue;
             }
         }
     }
